@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "23c6d770-a540-4423-8ddc-f0a6458580dd",
+		"name": "BhanuSirGPSVehicleTrips",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24428670",
+		"_collection_link": "https://blue-meadow-163913.postman.co/workspace/Sandeep's~2847a47b-c62c-4644-890e-b4580e27ae2c/collection/24428670-23c6d770-a540-4423-8ddc-f0a6458580dd?action=share&creator=24428670&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "GetTokenV3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"username\": \"padmasri@assettl.com\",\r\n   \"password\": \"Rjil@12345\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://jiohumsafar.jio.com/jhsthirdpartyapi/api/trips/v3/gettoken",
+					"protocol": "https",
+					"host": [
+						"jiohumsafar",
+						"jio",
+						"com"
+					],
+					"path": [
+						"jhsthirdpartyapi",
+						"api",
+						"trips",
+						"v3",
+						"gettoken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateTripV3-GPS",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2ODMyNzAxOTMsImV4cCI6MTY4MzI5ODk5M30.UCviVc0DkQuRxtwTLXlgX195fyc4ab9_ETBO5SaYGRk",
+						"type": "text"
+					},
+					{
+						"key": "tokenuserid",
+						"value": "f03fd164-9131-11eb-a60c-0259dcfef99f",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"clientkey\": \"276d1212-85b4-11ec-aa76-0259dcfef99f\",\r\n    \"businessid\": \"RIL\",\r\n    \"subbusinessid\": \"PETCHEM\",\r\n    \"appsource\": \"1\",\r\n    \"vehicle\": {\r\n        \"regno\": \"TS11EF9119\",\r\n        \"type\": \"30\"\r\n    },\r\n    \"driver\": {\r\n        \"name\": \"valmiki\",\r\n        \"mobile\": \"6303287645\",\r\n        \"alternate_mobile\": \"\",\r\n        \"driverconsent\": true,\r\n        \"active\": true\r\n    },\r\n    \"transporter\": {\r\n        \"name\": \"Divya\",\r\n        \"code\": \"RC9119\"\r\n    },\r\n    \"route\": {\r\n        \"name\": \"\",\r\n        \"code\": \"\"\r\n    },\r\n    \"origin\": {\r\n        \"latitude\": \"17.45108\",\r\n        \"longitude\": \"78.3854\",\r\n        \"address\": \"Silicon Heights, Image Gardens Rd, Jaihind Enclave, Madhapur, Hyderabad, Telangana 500081, India\",\r\n        \"name\": \"\",\r\n        \"code\": \"\",\r\n        \"materials\": [\r\n            {\r\n                \"name\": \"Textile/Garments\",\r\n                \"code\": \"TG256001\",\r\n                \"type\": \"Textile\",\r\n                \"desc\": \"Textile/Garments\",\r\n                \"hsn_code\": \"xxxxxxx\",\r\n                \"sku\": \"xxxxxxxx\",\r\n                \"qty\": \"10\",\r\n                \"units\": \"No’s\"\r\n            }\r\n        ],\r\n        \"invoices\": [\r\n            {\r\n                \"number\": \"xxxxxxxxxx\",\r\n                \"date\": \"2020-12-18\"\r\n            }\r\n        ]\r\n    },\r\n    \"destination\": {\r\n        \"latitude\": \"17.4022\",\r\n        \"longitude\": \"78.51979\",\r\n        \"address\": \"2-2-20/B, Bagh Amberpet, Durgabai Deshmukh Colony C-Lane, Hyderabad, Telangana 500013, India\",\r\n        \"name\": \"\",\r\n        \"code\": \"\",\r\n        \"eta\": \"\",\r\n        \"stt\": \"xxxxx\",\r\n        \"materials” \": [\r\n            {\r\n                \"name\": \"Textile/Garments\",\r\n                \"code\": \"TG256001\",\r\n                \"type\": \"Textile\",\r\n                \"desc\": \"Textile/Garments\",\r\n                \"hsn_code\": \"xxxxxxx\",\r\n                \"sku\": \"xxxxxxxx\",\r\n                \"qty\": \"10\",\r\n                \"units\": \"No’s\"\r\n            }\r\n        ],\r\n        \"invoices\": [\r\n            {\r\n                \"number\": \"xxxxxxxxxx\",\r\n                \"date\": \"2023-12-18\"\r\n            }\r\n        ],\r\n        \"EWB\": [\r\n            {\r\n                \"number\": \"231155848\",\r\n                \"validity\": \"21-05-2024 05:30:00\"\r\n            }\r\n        ]\r\n    },\r\n    \"touchpoints\": [\r\n        {\r\n            \"code\": \"TC01\",\r\n            \"name\": \"TC1\",\r\n            \"seqno\": \"1\",\r\n            \"latitude\": \"17.43676\",\r\n            \"longitude\": \"78.4007\",\r\n            \"address\": \"Rd Number 36, Aditya Enclave, Venkatagiri, Madhapur, Hyderabad, Telangana 500033, India\",\r\n            \"materials\": [\r\n                {\r\n                    \"name\": \"Textile/Garments\",\r\n                    \"code\": \"TG256001\",\r\n                    \"type\": \"Textile\",\r\n                    \"desc\": \"Textile/Garments\",\r\n                    \"hsn_code\": \"xxxxxxx\",\r\n                    \"sku\": \"xxxxxxxx\",\r\n                    \"qty\": \"10\",\r\n                    \"units\": \"No’s\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"code\": \"TC02\",\r\n            \"name\": \"TC2\",\r\n            \"seqno\": \"2\",\r\n            \"latitude\": \"17.4253\",\r\n            \"longitude\": \"78.41454\",\r\n            \"address\": \"Jubilee Hills Check Post Road, Jubilee Hills, Hyderabad, Telangana, India\",\r\n            \"materials\": [\r\n                {\r\n                    \"name\": \"Textile/Garments\",\r\n                    \"code\": \"TG256001\",\r\n                    \"type\": \"Textile\",\r\n                    \"desc\": \"Textile/Garments\",\r\n                    \"hsn_code\": \"xxxxxxx\",\r\n                    \"sku\": \"xxxxxxxx\",\r\n                    \"qty\": \"10\",\r\n                    \"units\": \"No’s\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"code\": \"TC03\",\r\n            \"name\": \"TC3\",\r\n            \"seqno\": \"3\",\r\n            \"latitude\": \"17.41509\",\r\n            \"longitude\": \"78.4488\",\r\n            \"address\": \"City Center Mall, 8-2-592, Rd Number 1, Banjara Hills, Hyderabad, Telangana 500034, India\",\r\n            \"materials\": [\r\n                {\r\n                    \"name\": \"Textile/Garments\",\r\n                    \"code\": \"TG256001\",\r\n                    \"type\": \"Textile\",\r\n                    \"desc\": \"Textile/Garments\",\r\n                    \"hsn_code\": \"xxxxxxx\",\r\n                    \"sku\": \"xxxxxxxx\",\r\n                    \"qty\": \"10\",\r\n                    \"units\": \"No’s\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"code\": \"TC04\",\r\n            \"name\": \"TC4\",\r\n            \"seqno\": \"4\",\r\n            \"latitude\": \"17.40612\",\r\n            \"longitude\": \"78.47895\",\r\n            \"address\": \"Liberty Rd, opp. Stanza Complex, Gagan Mahal, Domalguda, Himayatnagar, Hyderabad, Telangana 500029, India\",\r\n            \"materials\": [\r\n                {\r\n                    \"name\": \"Textile/Garments\",\r\n                    \"code\": \"TG256001\",\r\n                    \"type\": \"Textile\",\r\n                    \"desc\": \"Textile/Garments\",\r\n                    \"hsn_code\": \"xxxxxxx\",\r\n                    \"sku\": \"xxxxxxxx\",\r\n                    \"qty\": \"10\",\r\n                    \"units\": \"No’s\"\r\n                }\r\n            ],\r\n            \"buffertime\": \"00/00/30\",\r\n            \"invoices\": [\r\n                {\r\n                    \"number\": \"xxxxxxxxxx\",\r\n                    \"date\": \"2020-12-18\"\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n    \"docs\": {\r\n        \"lrnumber\": \"test354\"\r\n    },\r\n    \"trip\": {\r\n        \"referenceid\": \"9999996644\",\r\n        \"autostarttrip\": \"True\",\r\n        \"autoendtrip\": \"True\",\r\n        \"getdriverconsent\": \"False\",\r\n        \"datetime\": \"2023-05-05 19:30:00\",\r\n        \"trackingsource\": \"2\",\r\n        \"distance\": \"\",\r\n        \"duration\": \"\",\r\n        \"schedulereturntrip\": \"0\",\r\n        \"custom_field\": [\r\n            \"Field Incharge\",\r\n            \"9825005481\"\r\n        ]\r\n    },\r\n    \"marketvehicle\": \"False\",\r\n    \"portabletracker\": {\r\n        \"enabled\": \"False\",\r\n        \"deviceid\": \"\"\r\n    },\r\n    \"additionaldrivers\": [\r\n        {\r\n            \"name\": \"Sandeep\",\r\n            \"mno\": \"9898985544\",\r\n            \"driverconsent\": true\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://jiohumsafar.jio.com/jhsthirdpartyapi/api/trips/v3/createtrip",
+					"protocol": "https",
+					"host": [
+						"jiohumsafar",
+						"jio",
+						"com"
+					],
+					"path": [
+						"jhsthirdpartyapi",
+						"api",
+						"trips",
+						"v3",
+						"createtrip"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateTripV3-SIM",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2ODMyNzAyNTksImV4cCI6MTY4MzI5OTA1OX0.tf6XqYjQqRN6F6ZpjLzNBQlkFZLUIKGMkgWLppS3-kQ",
+						"type": "text"
+					},
+					{
+						"key": "tokenuserid",
+						"value": "0a9c32d0-32d4-11eb-89fb-001dd8b7005d",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"clientkey\": \"1e47eb97-51a0-11eb-89fb-001dd8b7005d\",\r\n    \"businessid\": \"RIL\",\r\n    \"subbusinessid\": \"PETCHEM\",\r\n    \"appsource\": \"1\",\r\n    \"vehicle\": {\r\n        \"regno\": \"KA11TT3333\",\r\n        \"type\": \"30\"\r\n    },\r\n    \"driver\": {\r\n        \"name\": \"Sreedevi\",\r\n        \"mobile\": \"8225558851\",\r\n        \"alternate_mobile\": \"\",\r\n        \"driverconsent\": true,\r\n        \"active\": true\r\n    },\r\n    \"transporter\": {\r\n        \"name\": \"Vamshi\",\r\n        \"code\": \"\"\r\n    },\r\n    \"route\": {\r\n        \"name\": \"\",\r\n        \"code\": \"\"\r\n    },\r\n    \"origin\": {\r\n        \"latitude\": \"17.45108\",\r\n        \"longitude\": \"78.3854\",\r\n        \"address\": \"Silicon Heights, Image Gardens Rd, Jaihind Enclave, Madhapur, Hyderabad, Telangana 500081, India\",\r\n        \"name\": \"\",\r\n        \"code\": \"\",\r\n        \"materials\": [\r\n            {\r\n                \"name\": \"”Textile/Garments”\",\r\n                \"code\": \"TG256001\",\r\n                \"type\": \"Textile\",\r\n                \"desc\": \"Textile/Garments\",\r\n                \"hsn_code\": \"xxxxxxx\",\r\n                \"sku\": \"xxxxxxxx\",\r\n                \"qty\": \"10\",\r\n                \"units\": \"No’s\"\r\n            }\r\n        ],\r\n        \"invoices\": [\r\n            {\r\n                \"number\": \"xxxxxxxxxx\",\r\n                \"date\": \"2020-12-18\"\r\n            }\r\n        ]\r\n    },\r\n    \"destination\": {\r\n        \"latitude\": \"17.4022\",\r\n        \"longitude\": \"78.51979\",\r\n        \"address\": \"2-2-20/B, Bagh Amberpet, Durgabai Deshmukh Colony C-Lane, Hyderabad, Telangana 500013, India\",\r\n        \"name\": \"\",\r\n        \"code\": \"\",\r\n        \"eta\": \"\",\r\n        \"stt\": \"xxxxx\",\r\n        \"materials” \": [\r\n            {\r\n                \"name\": \"Textile/Garments\",\r\n                \"code\": \"TG256001\",\r\n                \"type\": \"Textile\",\r\n                \"desc\": \"Textile/Garments\",\r\n                \"hsn_code\": \"xxxxxxx\",\r\n                \"sku\": \"xxxxxxxx\",\r\n                \"qty\": \"10\",\r\n                \"units\": \"No’s\"\r\n            }\r\n        ],\r\n        \"invoices\": [\r\n            {\r\n                \"number\": \"xxxxxxxxxx\",\r\n                \"date\": \"2020-12-18\"\r\n            }\r\n        ],\r\n        \"EWB\": [\r\n            {\r\n                \"number\": \"231155848\",\r\n                \"validity\": \"21-05-2022 05:30:00\"\r\n            }\r\n        ]\r\n    },\r\n    \"touchpoints\": [\r\n        {\r\n            \"code\": \"TC01\",\r\n            \"name\": \"TC1\",\r\n            \"seqno\": \"1\",\r\n            \"latitude\": \"17.43676\",\r\n            \"longitude\": \"78.4007\",\r\n            \"address\": \"Rd Number 36, Aditya Enclave, Venkatagiri, Madhapur, Hyderabad, Telangana 500033, India\",\r\n            \"materials\": [\r\n                {\r\n                    \"name\": \"Textile/Garments\",\r\n                    \"code\": \"TG256001\",\r\n                    \"type\": \"Textile\",\r\n                    \"desc\": \"Textile/Garments\",\r\n                    \"hsn_code\": \"xxxxxxx\",\r\n                    \"sku\": \"xxxxxxxx\",\r\n                    \"qty\": \"10\",\r\n                    \"units\": \"No’s\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"code\": \"TC02\",\r\n            \"name\": \"TC2\",\r\n            \"seqno\": \"2\",\r\n            \"latitude\": \"17.4253\",\r\n            \"longitude\": \"78.41454\",\r\n            \"address\": \"Jubilee Hills Check Post Road, Jubilee Hills, Hyderabad, Telangana, India\",\r\n            \"materials\": [\r\n                {\r\n                    \"name\": \"Textile/Garments\",\r\n                    \"code\": \"TG256001\",\r\n                    \"type\": \"Textile\",\r\n                    \"desc\": \"Textile/Garments\",\r\n                    \"hsn_code\": \"xxxxxxx\",\r\n                    \"sku\": \"xxxxxxxx\",\r\n                    \"qty\": \"10\",\r\n                    \"units\": \"No’s\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"code\": \"TC03\",\r\n            \"name\": \"TC3\",\r\n            \"seqno\": \"3\",\r\n            \"latitude\": \"17.41509\",\r\n            \"longitude\": \"78.4488\",\r\n            \"address\": \"City Center Mall, 8-2-592, Rd Number 1, Banjara Hills, Hyderabad, Telangana 500034, India\",\r\n            \"materials\": [\r\n                {\r\n                    \"name\": \"Textile/Garments\",\r\n                    \"code\": \"TG256001\",\r\n                    \"type\": \"Textile\",\r\n                    \"desc\": \"Textile/Garments\",\r\n                    \"hsn_code\": \"xxxxxxx\",\r\n                    \"sku\": \"xxxxxxxx\",\r\n                    \"qty\": \"10\",\r\n                    \"units\": \"No’s\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"code\": \"TC04\",\r\n            \"name\": \"TC4\",\r\n            \"seqno\": \"4\",\r\n            \"latitude\": \"17.40612\",\r\n            \"longitude\": \"78.47895\",\r\n            \"address\": \"Liberty Rd, opp. Stanza Complex, Gagan Mahal, Domalguda, Himayatnagar, Hyderabad, Telangana 500029, India\",\r\n            \"materials\": [\r\n                {\r\n                    \"name\": \"Textile/Garments\",\r\n                    \"code\": \"TG256001\",\r\n                    \"type\": \"Textile\",\r\n                    \"desc\": \"Textile/Garments\",\r\n                    \"hsn_code\": \"xxxxxxx\",\r\n                    \"sku\": \"xxxxxxxx\",\r\n                    \"qty\": \"10\",\r\n                    \"units\": \"No’s\"\r\n                }\r\n            ],\r\n            \"buffertime\": \"00/00/30\",\r\n            \"invoices\": [\r\n                {\r\n                    \"number\": \"xxxxxxxxxx\",\r\n                    \"date\": \"2020-12-18\"\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n    \"docs\": {\r\n        \"lrnumber\": \"test354\"\r\n    },\r\n    \"trip\": {\r\n        \"referenceid\": \"9992222811\",\r\n        \"autostarttrip\": \"True\",\r\n        \"autoendtrip\": \"True\",\r\n        \"getdriverconsent\": \"True\",\r\n        \"datetime\": \"2023-05-05 17:05:00\",\r\n        \"trackingsource\": \"1\",\r\n        \"distance\": \"\",\r\n        \"duration\": \"\",\r\n        \"schedulereturntrip\": \"0\",\r\n        \"custom_field\": [\r\n            \"Field Incharge\",\r\n            \"9825005481\"\r\n        ]\r\n    },\r\n    \"marketvehicle\": \"True\",\r\n    \"portabletracker\": {\r\n        \"enabled\": \"False\",\r\n        \"deviceid\": \"\"\r\n    },\r\n    \"additionaldrivers\": [\r\n        {\r\n            \"name\": \"Sandeep\",\r\n            \"mno\": \"9898985544\",\r\n            \"driverconsent\": true\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sit.jiohumsafar.jio.com/jhsthirdpartyapi/api/trips/v3/createtrip",
+					"protocol": "https",
+					"host": [
+						"sit",
+						"jiohumsafar",
+						"jio",
+						"com"
+					],
+					"path": [
+						"jhsthirdpartyapi",
+						"api",
+						"trips",
+						"v3",
+						"createtrip"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
